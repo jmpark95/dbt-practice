@@ -1,0 +1,43 @@
+version: 2
+
+sources:
+  - name: transformation
+    database: symmetric-axle-433607-g3
+    schema: movie
+
+    tables:
+      - name: now_playing
+
+models:
+  - name: now_playing_transformed
+    description: "remove fields from source that are not required"
+    columns:
+      - name: id
+        data_type: int64
+
+      - name: title
+        data_type: string
+
+      - name: genre_ids
+        data_type: string
+
+      - name: release_date
+        data_type: date
+
+      - name: original_language
+        data_type: string
+
+      - name: vote_average
+        data_type: float
+
+      - name: overview
+        data_type: string
+
+      - name: popularity
+        data_type: float
+
+      - name: vote_count
+        data_type: int64
+
+      - name: adult
+        data_type: boolean
