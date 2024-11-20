@@ -14,6 +14,6 @@ SELECT
     vote_average,
     overview,
     popularity,
-    vote_count
+    vote_count,
     adult
 FROM source
